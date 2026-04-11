@@ -45,9 +45,11 @@ ollama-modelfiles/
 ├── mac-m3-24gb/
 │   ├── gemma4-26b-moe.txt
 │   └── gemma4-31b-dense.txt
-└── pc-rtx5090-32gb/
-    ├── gemma4-26b-moe.txt
-    └── gemma4-31b-dense.txt
+├── pc-rtx5090-32gb/
+│   ├── gemma4-26b-moe.txt
+│   └── gemma4-31b-dense.txt
+└── scripts/
+    └── ollama-network-expose.ps1
 ```
 
 ## Parameters
@@ -69,9 +71,9 @@ After setup, select the desired model in Copilot Chat:
 
 | Script | Platform | Description |
 |--------|----------|-------------|
-| `scripts/ollama-network-expose.ps1` | Windows | Exposes Ollama API on the local network |
+| `scripts/ollama-network-expose.ps1` | Windows (PowerShell) | Exposes the Ollama API on the local network |
 
-```bash
-# Run as Administrator
-.\scripts\ollama-network-expose.ps1
+```powershell
+# Run from repo root in an elevated PowerShell session
+powershell -ExecutionPolicy Bypass -File .\scripts\ollama-network-expose.ps1
 ```
