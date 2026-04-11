@@ -64,3 +64,14 @@ ollama-modelfiles/
 After setup, select the desired model in Copilot Chat:
 - `gemma4-26b-coding`
 - `gemma4-31b-coding`
+
+## Scripts
+
+| Script | Platform | Description |
+|--------|----------|-------------|
+| `scripts/ollama-network-expose.ps1` | Windows | Exposes Ollama API on the local network |
+
+```bash
+# Run as Administrator
+.\scripts\ollama-network-expose.ps1
+```
