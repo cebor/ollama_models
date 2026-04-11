@@ -46,8 +46,8 @@ ollama-modelfiles/
 │   ├── gemma4-26b-moe.txt
 │   └── gemma4-31b-dense.txt
 └── pc-rtx5090-32gb/
-├── gemma4-26b-moe.txt
-└── gemma4-31b-dense.txt
+    ├── gemma4-26b-moe.txt
+    └── gemma4-31b-dense.txt
 ```
 
 ## Parameters
