@@ -21,20 +21,23 @@ Ollama Modelfile collection for local AI coding workflows, optimized for two mac
 
 ## Setup
 
+### Pull Models (Common)
 ```bash
-# Pull models
 ollama pull gemma4:26b
 ollama pull gemma4:31b
+```
 
-# Create modelfiles — Mac
+### Mac Setup
+```bash
 ollama create gemma4-26b-coding -f ./mac-m3-24gb/gemma4-26b-moe.txt
 ollama create gemma4-31b-coding -f ./mac-m3-24gb/gemma4-31b-dense.txt
+ollama list
+```
 
-# Create modelfiles — PC
+### PC Setup
+```bash
 ollama create gemma4-26b-coding -f ./pc-rtx5090-32gb/gemma4-26b-moe.txt
 ollama create gemma4-31b-coding -f ./pc-rtx5090-32gb/gemma4-31b-dense.txt
-
-# Verify
 ollama list
 ```
 
