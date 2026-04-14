@@ -15,29 +15,39 @@ Ollama Modelfile collection for local AI coding workflows, optimized for two mac
 |-------|------|---------------|---------|--------|
 | gemma4:26b | MoE | ~18 GB | 16384 | 65536 |
 | gemma4:31b | Dense | ~21 GB | 8192 | 32768 |
+| qwen3.5:35b | MoE | ~24 GB | - | 65536 |
+| qwen3.5:27b | Dense | ~17 GB | 8192 | 32768 |
 
-> **Note (Mac):** The 31b Dense model leaves very little KV-cache headroom on 24 GB.
-> If it becomes unstable, reduce `num_ctx` to `4096`. The 26b MoE is the better choice on Mac.
 
 ## Setup
 
-### Pull Models (Common)
-```bash
-ollama pull gemma4:26b
-ollama pull gemma4:31b
-```
-
 ### Mac Setup
 ```bash
+# Pull models
+ollama pull gemma4:26b
+ollama pull gemma4:31b
+ollama pull qwen3.5:27b
+
+# Create custom configs
 ollama create gemma4-26b-coding -f ./mac-m3-24gb/gemma4-26b-moe.txt
 ollama create gemma4-31b-coding -f ./mac-m3-24gb/gemma4-31b-dense.txt
+ollama create qwen3.5-27b-coding -f ./mac-m3-24gb/qwen3.5-27b-dense.txt
 ollama list
 ```
 
 ### PC Setup
 ```bash
+# Pull models
+ollama pull gemma4:26b
+ollama pull gemma4:31b
+ollama pull qwen3.5:27b
+ollama pull qwen3.5:35b
+
+# Create custom configs
 ollama create gemma4-26b-coding -f ./pc-rtx5090-32gb/gemma4-26b-moe.txt
 ollama create gemma4-31b-coding -f ./pc-rtx5090-32gb/gemma4-31b-dense.txt
+ollama create qwen3.5-27b-coding -f ./pc-rtx5090-32gb/qwen3.5-27b-dense.txt
+ollama create qwen3.5-35b-coding -f ./pc-rtx5090-32gb/qwen3.5-35b-moe.txt
 ollama list
 ```
 
@@ -47,10 +57,13 @@ ollama-modelfiles/
 ├── README.md
 ├── mac-m3-24gb/
 │   ├── gemma4-26b-moe.txt
-│   └── gemma4-31b-dense.txt
+│   ├── gemma4-31b-dense.txt
+│   └── qwen3.5-27b-dense.txt
 ├── pc-rtx5090-32gb/
 │   ├── gemma4-26b-moe.txt
-│   └── gemma4-31b-dense.txt
+│   ├── gemma4-31b-dense.txt
+│   ├── qwen3.5-27b-dense.txt
+│   └── qwen3.5-35b-moe.txt
 └── scripts/
     └── ollama-network-expose.ps1
 ```
@@ -69,6 +82,8 @@ ollama-modelfiles/
 After setup, select the desired model in Copilot Chat:
 - `gemma4-26b-coding`
 - `gemma4-31b-coding`
+- `qwen3.5-27b-coding`
+- `qwen3.5-35b-coding` *(PC only)*
 
 ## Scripts
 

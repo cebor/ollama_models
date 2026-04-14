@@ -19,7 +19,9 @@ Never exceed these values. They are derived from available memory.
 | Model | mac-m3-24gb | pc-rtx5090-32gb |
 |-------|-------------|-----------------|
 | gemma4:26b (MoE, ~18 GB) | 16384 | 65536 |
-| gemma4:31b (Dense, ~21 GB) | 8192 *(4096 if unstable)* | 32768 |
+| gemma4:31b (Dense, ~21 GB) | 8192 | 32768 |
+| qwen3.5:27b (Dense, ~17 GB) | 8192 | 32768 |
+| qwen3.5:35b (MoE, ~24 GB) | — (PC only) | 65536 |
 
 ## Required Parameters
 
