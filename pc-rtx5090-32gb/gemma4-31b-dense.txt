@@ -2,5 +2,5 @@ FROM gemma4:31b
 
 PARAMETER num_ctx 32768
 PARAMETER num_predict 4096
-PARAMETER temperature 0.2
+PARAMETER temperature 0.5
 PARAMETER repeat_penalty 1.1

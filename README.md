@@ -30,8 +30,8 @@ ollama pull qwen3.5:27b
 
 # Create custom configs
 ollama create gemma4-26b-coding -f ./mac-m3-24gb/gemma4-26b-moe.txt
-ollama create gemma4-31b-coding -f ./mac-m3-24gb/gemma4-31b-dense.txt
-ollama create qwen3.5-27b-coding -f ./mac-m3-24gb/qwen3.5-27b-dense.txt
+ollama create gemma4-31b-planning -f ./mac-m3-24gb/gemma4-31b-dense.txt
+ollama create qwen3.5-27b-planning -f ./mac-m3-24gb/qwen3.5-27b-dense.txt
 ollama list
 ```
 
@@ -45,9 +45,9 @@ ollama pull qwen3.5:35b
 
 # Create custom configs
 ollama create gemma4-26b-coding -f ./pc-rtx5090-32gb/gemma4-26b-moe.txt
-ollama create gemma4-31b-coding -f ./pc-rtx5090-32gb/gemma4-31b-dense.txt
-ollama create qwen3.5-27b-coding -f ./pc-rtx5090-32gb/qwen3.5-27b-dense.txt
+ollama create gemma4-31b-planning -f ./pc-rtx5090-32gb/gemma4-31b-dense.txt
 ollama create qwen3.5-35b-coding -f ./pc-rtx5090-32gb/qwen3.5-35b-moe.txt
+ollama create qwen3.5-27b-planning -f ./pc-rtx5090-32gb/qwen3.5-27b-dense.txt
 ollama list
 ```
 
@@ -74,16 +74,16 @@ ollama-modelfiles/
 |-----------|-------|-------------|
 | `num_ctx` | varies by model/hardware | Maximum context length in tokens |
 | `num_predict` | 2048 / 4096 | Maximum response length |
-| `temperature` | 0.2 | Low = more deterministic, precise code output |
+| `temperature` | 0.2 (coding) / 0.5 (planning) | Coding = deterministic output; Planning = more creative reasoning |
 | `repeat_penalty` | 1.1 | Prevents repetitive outputs |
 
 ## VS Code Copilot Chat
 
 After setup, select the desired model in Copilot Chat:
 - `gemma4-26b-coding`
-- `gemma4-31b-coding`
-- `qwen3.5-27b-coding`
+- `gemma4-31b-planning`
 - `qwen3.5-35b-coding` *(PC only)*
+- `qwen3.5-27b-planning`
 
 ## Scripts
 
