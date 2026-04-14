@@ -15,7 +15,7 @@ Ollama Modelfile collection for local AI coding workflows, optimized for two mac
 |-------|------|---------------|---------|--------|
 | gemma4:26b | MoE | ~18 GB | 16384 | 65536 |
 | gemma4:31b | Dense | ~21 GB | 8192 | 32768 |
-| qwen3.5:35b | MoE | ~24 GB | - | 65536 |
+| qwen3.5:35b | MoE | ~24 GB | — | 65536 |
 | qwen3.5:27b | Dense | ~17 GB | 8192 | 32768 |
 
 
