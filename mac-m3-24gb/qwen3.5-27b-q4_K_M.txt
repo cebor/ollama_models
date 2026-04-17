@@ -1,4 +1,4 @@
-FROM gemma4:31b
+FROM qwen3.5:27b-q4_K_M
 
 PARAMETER num_ctx 8192
 PARAMETER num_predict 2048

@@ -1,4 +1,4 @@
-FROM qwen3.5:35b
+FROM qwen3.6:35b-a3b-q4_K_M
 
 PARAMETER num_ctx 65536
 PARAMETER num_predict 4096
