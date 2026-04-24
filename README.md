@@ -23,11 +23,6 @@ Ollama Modelfile collection for local AI coding workflows, optimized for two mac
 
 ### Mac Setup
 ```bash
-# Pull models
-ollama pull gemma4:26b-a4b-it-q4_K_M
-ollama pull gemma4:31b-it-q4_K_M
-ollama pull qwen3.6:27b-q4_K_M
-
 # Create custom configs
 ollama create gemma4-26b-coding -f ./mac-m3-24gb/gemma4-26b-a4b-it-q4_K_M.txt
 ollama create gemma4-31b-planning -f ./mac-m3-24gb/gemma4-31b-it-q4_K_M.txt
@@ -37,12 +32,6 @@ ollama list
 
 ### PC Setup
 ```bash
-# Pull models
-ollama pull gemma4:26b-a4b-it-q4_K_M
-ollama pull gemma4:31b-it-q4_K_M
-ollama pull qwen3.6:27b-q4_K_M
-ollama pull qwen3.6:35b-a3b-q4_K_M
-
 # Create custom configs
 ollama create gemma4-26b-coding -f ./pc-rtx5090-32gb/gemma4-26b-a4b-it-q4_K_M.txt
 ollama create gemma4-31b-planning -f ./pc-rtx5090-32gb/gemma4-31b-it-q4_K_M.txt
