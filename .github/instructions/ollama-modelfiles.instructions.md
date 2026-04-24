@@ -20,7 +20,7 @@ Never exceed these values. They are derived from available memory.
 |-------|-------------|-----------------|
 | gemma4:26b-a4b-it-q4_K_M (MoE, ~18 GB) | 16384 | 65536 |
 | gemma4:31b-it-q4_K_M (Dense, ~21 GB) | 8192 | 32768 |
-| qwen3.5:27b-q4_K_M (Dense, ~17 GB) | 8192 | 32768 |
+| qwen3.6:27b-q4_K_M (Dense, ~17 GB) | 8192 | 32768 |
 | qwen3.6:35b-a3b-q4_K_M (MoE, ~24 GB) | — (PC only) | 65536 |
 
 ## Required Parameters
