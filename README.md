@@ -13,10 +13,10 @@ Ollama Modelfile collection for local AI coding workflows, optimized for two mac
 
 | Model | Type | Size (Q4_K_M) | Mac ctx | PC ctx |
 |-------|------|---------------|---------|--------|
-| gemma4:26b-a4b-it-q4_K_M | MoE | ~18 GB | 16384 | 65536 |
+| gemma4:26b-a4b-it-q4_K_M | MoE | ~18 GB | 16384 | 131072 |
 | gemma4:31b-it-q4_K_M | Dense | ~21 GB | 8192 | 32768 |
 | qwen3.6:27b-q4_K_M | Dense | ~17 GB | 8192 | 32768 |
-| qwen3.6:35b-a3b-q4_K_M | MoE | ~24 GB | — | 65536 |
+| qwen3.6:35b-a3b-q4_K_M | MoE | ~24 GB | — | 131072|
 
 
 ## Setup
@@ -62,7 +62,7 @@ ollama-modelfiles/
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | `num_ctx` | varies by model/hardware | Maximum context length in tokens |
-| `num_predict` | 2048 / 4096 | Maximum response length |
+| `num_predict` | 2048 / 4096 / 8192 | Maximum response length |
 | `temperature` | 0.2 (coding) / 0.5 (planning) | Coding = deterministic output; Planning = more creative reasoning |
 | `repeat_penalty` | 1.1 | Prevents repetitive outputs |
 

@@ -18,10 +18,10 @@ Never exceed these values. They are derived from available memory.
 
 | Model | mac-m3-24gb | pc-rtx5090-32gb |
 |-------|-------------|-----------------|
-| gemma4:26b-a4b-it-q4_K_M (MoE, ~18 GB) | 16384 | 65536 |
+| gemma4:26b-a4b-it-q4_K_M (MoE, ~18 GB) | 16384 | 131072 |
 | gemma4:31b-it-q4_K_M (Dense, ~21 GB) | 8192 | 32768 |
 | qwen3.6:27b-q4_K_M (Dense, ~17 GB) | 8192 | 32768 |
-| qwen3.6:35b-a3b-q4_K_M (MoE, ~24 GB) | — (PC only) | 65536 |
+| qwen3.6:35b-a3b-q4_K_M (MoE, ~24 GB) | — (PC only) | 131072|
 
 ## Required Parameters
 
@@ -36,7 +36,7 @@ PARAMETER temperature <value>
 PARAMETER repeat_penalty 1.1
 ```
 
-- `num_predict`: use `2048` for mac, `4096` for pc
+- `num_predict`: use `2048` for mac, `4096` for pc (or `8192` for large MoE models on PC)
 - `repeat_penalty` is fixed at `1.1` across all files
 - `temperature` depends on model type:
   - **coding models** (MoE, e.g. `*-moe.txt`): `0.2` — deterministic, precise output

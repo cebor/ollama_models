@@ -1,6 +1,6 @@
 FROM qwen3.6:35b-a3b-q4_K_M
 
-PARAMETER num_ctx 65536
-PARAMETER num_predict 4096
+PARAMETER num_ctx 131072
+PARAMETER num_predict 8192
 PARAMETER temperature 0.2
 PARAMETER repeat_penalty 1.1
