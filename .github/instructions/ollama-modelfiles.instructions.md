@@ -31,12 +31,10 @@ Every Modelfile must include all four parameters in this order:
 FROM <base-model>
 
 PARAMETER num_ctx <value>
-PARAMETER num_predict <value>
 PARAMETER temperature <value>
 PARAMETER repeat_penalty 1.1
 ```
 
-- `num_predict`: use `2048` for mac, `8192` for pc
 - `repeat_penalty` is fixed at `1.1` across all files
 - `temperature` depends on model type:
   - **coding models** (MoE, e.g. `*-moe.txt`): `0.2` — deterministic, precise output

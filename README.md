@@ -62,7 +62,6 @@ ollama-modelfiles/
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | `num_ctx` | varies by model/hardware | Maximum context length in tokens |
-| `num_predict` | 2048 (Mac) / 8192 (PC) | Maximum response length |
 | `temperature` | 0.2 (coding) / 0.5 (planning) | Coding = deterministic output; Planning = more creative reasoning |
 | `repeat_penalty` | 1.1 | Prevents repetitive outputs |
 

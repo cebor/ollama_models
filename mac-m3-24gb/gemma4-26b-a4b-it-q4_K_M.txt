@@ -1,6 +1,5 @@
 FROM gemma4:26b-a4b-it-q4_K_M
 
 PARAMETER num_ctx 16384
-PARAMETER num_predict 2048
 PARAMETER temperature 0.2
 PARAMETER repeat_penalty 1.1
